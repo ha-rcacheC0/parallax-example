@@ -1,0 +1,357 @@
+* {
+    font-family: sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: rgb(43, 0, 124);
+    text-align: center;
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    line-height: 30px;
+}
+
+h1 {
+    margin: 25px;
+}
+
+header p {
+    margin: 25px;
+    max-width: 850px;
+}
+
+button {
+    background-color: rgb(255, 94, 0);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 20px 25px;
+    margin: 15px 0px 45px;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+.text-col {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #f0f0f0;
+}
+
+.cols1-2 {
+    column-count: 2;
+    text-align: center;
+    column-width: 550px;
+    margin: 20px 30px 45px;
+    line-height: 30px;
+}
+
+.text-col h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 25px;
+}
+
+.text {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.text p {
+    text-align: center;
+    width: 350px;
+    margin: 20px 30px 45px;
+    line-height: 30px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: center;
+    align-content: center;
+    height: 750px;
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Città_del_vaticano.Basilica_di_San_Pietro._Interno_della_cupola._Maggio_2010_-_panoramio.jpg/2880px-Città_del_vaticano.Basilica_di_San_Pietro._Interno_della_cupola._Maggio_2010_-_panoramio.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.containers {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: center;
+    align-content: center;
+    gap: 20px;
+}
+
+ .container {
+    border: solid;
+    display: grid;
+    grid-template-rows: 180px 15px auto;
+    text-align: center;
+    width: 350px;
+    height: 550px;
+    background-color: white;
+    border: none;
+    border-radius: 7px;
+    box-shadow: 0px 0px 5px #f9f9f9;
+ }
+
+.container h3 {
+    margin: 50px;
+}
+
+.container p {
+    width: 100%;
+    padding: 50px;
+    margin-top: 55px;
+    line-height: 35px;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+    border-radius: 3px;
+    border-bottom: 2px solid black;
+}
+
+.col-2 {
+    background-color: white;
+}
+
+.col-2 h2 {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.col-2 p {
+    width: 1150px;
+    line-height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    color: white;
+    text-align: center;
+}
+
+.grid p {
+    padding: 0px 195px;
+    line-height: 30px;
+}
+
+.left-grid {
+    background-color: rgba(24, 51, 207, 0.918);
+}
+
+.right-grid {
+    background-color: rgb(60, 3, 194);
+}
+
+.left-grid h2,
+.right-grid h2,
+.left-grid p,
+.right-grid p {
+    margin: 55px 75px;
+    padding: 15px 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    text-align: center;
+    background-color: #333;
+    color: white;
+    line-height: 45px;
+}
+
+a:link {
+    color: lightblue;
+}
+
+a:active {
+    color:rgb(255, 94, 0);
+}
+
+a:hover {
+    color: white;
+}
+
+a:visited {
+    color: lightgreen;
+}
+
+
+
+
+/* Big Screen */
+
+@media (min-width: 2800px) {
+    body {
+        margin: auto 100px;
+    }
+
+}
+
+
+/* Tablet */
+
+@media (max-width: 1075px) {
+    .col-2 p {
+        width: 1025px;
+    }
+}
+
+@media (max-width: 945px) {
+   
+    .col-2 p {
+        width: 825px;
+    }
+    
+    .cards {
+        height: 1150px;
+    }
+   
+    .containers {
+       display: grid;
+       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+   }
+
+   .container {
+       width: 100%;
+       height: 100%;
+   }
+
+   .grid {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+   }
+
+   .text p {
+       padding: 50px;
+   }
+
+}
+
+/* Phone */ 
+
+@media (max-width: 690px) {
+    .cards {
+        height: 1350px;
+    }
+
+    .col-2 p {
+        width: 525px;
+    }
+} 
+
+@media (max-width: 550px) {
+    .cards {
+        height: 1600px;
+    }
+
+
+    .col-2 {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin:  0px auto;
+    }
+
+    .col-2 p {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 50px;
+        padding: 200px;
+    }
+
+
+    .text p {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 425px;
+        margin: 50px;
+        padding: 50px;
+    }
+
+
+}
+
+@media (max-width: 402px) {
+    .cards {
+        height: 1800px;
+    }
+
+    .left-grid h2,
+    .right-grid h2,
+    .left-grid p,
+    .right-grid p {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin: 10px auto;
+    }
+
+    .col-2 {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin:  0px auto;
+    }
+
+    .col-2 p {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 50px;
+        padding: 200px;
+        width: 350px;
+    }
+
+
+    .text p {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 425px;
+        margin: 50px;
+        padding: 50px;
+    }
+
+    .grid2 {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+}
+
